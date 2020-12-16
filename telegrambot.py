@@ -28,8 +28,10 @@ MessageLoop(bot, handle).run_as_thread()
 #Boot up Nachricht des Bots:
 print("Hi! I am your personal warping assistant!") #Auf der Konsole
 bot.sendMessage("1405736760", "Hi I am your personal warping assistent!") #In Telegram
-bot.sendMessage("1405736760", "I will text you if warping occurs.") #In Telegram
+bot.sendMessage("1405736760", "I will text you if a critical force occurs.") #In Telegram
 
 #Diese Methode wird in execute.py aufgerufen, wenn Warping auftritt. 
 def sendMessage():
-	bot.sendMessage("1405736760", "Warping erkannt und Drucker abgeschaltet!")
+	bot.sendMessage("1405736760", "Critical force detected! Print is stopped. You have to decide whether you want the printer to RESUME or to STOP.")
+	bot.sendMessage("1405736760", "If you want to RESUME: Choose RESUME on the printer display!")
+	bot.sendMessage("1405736760", "If you want to STOP: Choose STOP on the printer display!")
